@@ -25,3 +25,9 @@ dist-ssr
 
 # Ignored large file
 src/pages/assets/building/scene.gltf
+# Ignore everything in the parts folder
+*
+
+# Except for specific files if needed
+!*/
+!.gitignore   # if you want to include the .gitignore file itself
