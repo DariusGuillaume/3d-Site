@@ -24,10 +24,10 @@ dist-ssr
 *.sw?
 
 # Ignored large file
-src/pages/assets/building/scene.gltf
+src/parts/3d/scene.gltf
 
 # Ignore everything in the parts folder
-/src/parts/*
+src/parts/*
 
 # Except for specific files if needed
 !*/
