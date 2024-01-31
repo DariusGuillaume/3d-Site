@@ -10,7 +10,7 @@ import buildingScene from '/src/parts/3d/scene.gltf';
 import {a} from "@react-spring/three";
 
 
-const Building = ({isRotating,setIsRotating, ...props}) => {
+const Building = ({isRotating,setIsRotating, setCurrentStage, ...props}) => {
     const buildingRef = useRef();
   const {gl,viewport} = useThree();
   const { nodes, materials } = useGLTF(buildingScene);
