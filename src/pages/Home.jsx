@@ -5,7 +5,8 @@ import Loader  from '../components/Loader'
 import Building from '../models/Building'
 import Sky from '../models/Sky'
 import Bird from '../models/Bird'
-import Car from '../models/Car'
+import Plane from '../models/Plane'
+
 
 
 
@@ -16,7 +17,7 @@ import Car from '../models/Car'
 
 const Home = () => {
   const[isRotating, setIsRotating] = React.useState(false);
-
+  
   const adjustBuildingForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -33,7 +34,7 @@ const Home = () => {
   }
 
 
-  const adjustCarForScreenSize = () => {
+  const adjustPlaneForScreenSize = () => {
     let screenScale, screenPosition;
      if(window.innerWidth < 768){
       screenScale = [1.5, 1.5, 1.5];
@@ -46,7 +47,7 @@ const Home = () => {
   }
 
   const [buildingScale , buildingPosition,buildingRotation] = adjustBuildingForScreenSize();
-  const [carScale , carPosition] = adjustCarForScreenSize();
+  const [planeScale , planePosition] = adjustPlaneForScreenSize();
 
 
 
@@ -55,7 +56,7 @@ const Home = () => {
     <Canvas 
     className= {`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
 
-     camera= {{near: 0.1, far: 1000}}>
+     camera= {{near: .4, far: 1000}}>
 
 <Suspense fallback = {<Loader/>}>
 <directionalLight position = {[1,1,5]} intensity = {2} />
@@ -73,11 +74,11 @@ isRotating = {isRotating}
 setIsRotating = {setIsRotating}
 />
 
-<Car 
-rotation = {[0,20,0]}
+<Plane 
 isRotating= {isRotating}
-carScale = {carScale}
-carPosition = {carPosition}
+planeScale = {planeScale}
+planePosition = {planePosition}
+rotation = {[0,20,0]}
 />
 
 </Suspense>

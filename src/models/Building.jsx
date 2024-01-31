@@ -6,7 +6,7 @@ import React, { useRef, useEffect } from "react";
 import { useGLTF } from "@react-three/drei";
 import {useFrame, useThree} from "@react-three/fiber";
 
-import buildingScene from '/src/parts/3d/scene.gltf';
+import buildingScene from '/src/parts/3d/scene.glb';
 import {a} from "@react-spring/three";
 
 
@@ -129,981 +129,261 @@ const Building = ({isRotating,setIsRotating, setCurrentStage, ...props}) => {
 
 
   return (
-    <a.group ref = {buildingRef} {...props} >
-      <mesh
-        
-        
-        geometry={nodes.Ground.geometry}
-        material={materials["Material.014"]}
+    <a.group ref = {buildingRef} {...props} 
+    scale={0.04}
         position={[0.794, 0.28, 0.585]}
-        rotation={[-Math.PI, 0, 0]}
-        scale={[-21.015, 0.662, 12.031]}
-      />
-      <group position={[0.744, 8.198, -0.723]} scale={[12.169, 7.302, 5.815]}>
-        <mesh
-          
-          
-          geometry={nodes.Cube002_1.geometry}
-          material={materials.base}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube002_2.geometry}
-          material={materials["Material.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube002_3.geometry}
-          material={materials["Material.002"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube002_4.geometry}
-          material={materials["Material.003"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube002_5.geometry}
-          material={materials.concrete}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube002_6.geometry}
-          material={materials.Realistic_Glass_01}
-        />
-      </group>
+          >
+     
       <mesh
         
-        
-        geometry={nodes.Cube002.geometry}
-        material={materials["Material.011"]}
-        position={[8.747, 2.315, 6.416]}
-        scale={[1.57, 1.468, 1.307]}
+        geometry={nodes.Final_Bridge1_SF_Bridge_Mat001_0.geometry}
+        material={materials["SF_Bridge_Mat.001"]}
+    
       />
+
+
       <mesh
-        
-        
-        geometry={nodes.comhiclipartyqtup.geometry}
-        material={materials.comhiclipartyqtup}
-        position={[-11.44, 5.077, -2.597]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={[9.896, 6.686, 6.853]}
-      />
-      <mesh
-        
-        
-        geometry={
-          nodes["imgbin-graffiti-euclidean-illustration-bugs-N7kMVKfq8Hdw122"]
-            .geometry
-        }
-        material={
-          materials[
-            "imgbin-graffiti-euclidean-illustration-bugs-N7kMVKfq8Hdw122"
-          ]
-        }
-        position={[12.975, 4.558, -3.027]}
-        rotation={[Math.PI / 2, 0, -Math.PI / 2]}
-        scale={3.576}
-      />
-      <mesh
-        
-        
-        geometry={nodes.arizonacans.geometry}
-        material={materials.arizonacans}
-        position={[-7.593, 2.013, 5.092]}
-        rotation={[Math.PI / 2, 0, -0.028]}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Plane003.geometry}
-        material={materials["Old Metal.003"]}
-        position={[8.467, 4.954, 5.092]}
-        rotation={[-1.502, Math.PI / 2, 0]}
-        scale={[1.426, 0.796, 3.641]}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Plane001.geometry}
-        material={materials["Old Metal.004"]}
-        position={[-7.056, 5.247, 3.875]}
-        rotation={[-1.502, Math.PI / 2, 0]}
-        scale={[1.51, 0.843, 3.856]}
-      />
-      <mesh
-        
-        
-        geometry={nodes["619IK3iQ-tL_AC_UF894,1000_QL80_"].geometry}
-        material={materials["619IK3iQ-tL._AC_UF894,1000_QL80_"]}
-        position={[10.261, 3.108, 4.711]}
-        rotation={[1.575, 0.02, 0.028]}
-        scale={2.217}
-      />
-      <group position={[-7.079, 3.428, 1.12]} scale={[2.927, 3.385, 2.482]}>
-        <mesh
-          
-          
-          geometry={nodes.Cube007_1.geometry}
-          material={materials["Frame.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube007_2.geometry}
-          material={materials["glass.001"]}
-        />
-      </group>
-      <mesh
-        
-        
-        geometry={nodes.Cube005.geometry}
-        material={materials.Handle}
-        position={[0.002, 3.716, 4.581]}
-        rotation={[0.033, 0.1, 3.138]}
-        scale={0.023}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Cube008.geometry}
-        material={materials["Handle.002"]}
-        position={[1.5, 3.85, 7.181]}
-        rotation={[0, 0.236, 0]}
-        scale={0.023}
-      />
-      <group
-        position={[-3.608, 3.549, 6.929]}
-        rotation={[0, 0.645, 0]}
-        scale={[2.81, 3.25, 2.383]}
-      >
-        <mesh
-          
-          
-          geometry={nodes.Cube010.geometry}
-          material={materials["Frame.003"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube010_1.geometry}
-          material={materials["glass.003"]}
-          position={[0.043, 0, 0.038]}
-        />
-      </group>
-      <mesh
-        
-        
-        geometry={nodes.iron_man.geometry}
-        material={materials["iron man"]}
-        position={[-6.812, 2.242, 5.065]}
-        rotation={[Math.PI / 2, 0, -0.039]}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Hinge_low.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Body.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Lid.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Pipe.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Lid_1.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Wheel.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Wheel_base.geometry}
-        material={materials.Dumpster}
-        position={[8.7, 0.942, -8.516]}
-        rotation={[-Math.PI, 0.021, -Math.PI]}
-        scale={0.038}
-      />
-      <group position={[-7.784, 3.443, 13.564]} scale={0.142}>
-        <mesh
-          
-          
-          geometry={nodes.low001.geometry}
-          material={materials["Material.012"]}
-          position={[-8.855, -1.11, -165.565]}
-          rotation={[-1.489, -0.014, -3.095]}
-          scale={7.319}
-        />
-      </group>
-      <mesh
-        
-        
-        geometry={nodes.Text.geometry}
-        material={materials["Material.015"]}
-        position={[-11.544, 1.717, -0.712]}
-        rotation={[1.571, -0.018, 1.568]}
-        scale={1.825}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Text001.geometry}
-        material={materials["Material.017"]}
-        position={[-11.453, 2.311, 2.424]}
-        rotation={[1.571, -0.018, 1.559]}
-        scale={1.825}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Text002.geometry}
-        material={materials["Material.018"]}
-        position={[-11.501, 4.149, -2.346]}
-        rotation={[1.571, -0.018, 1.559]}
-        scale={3.378}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Text003.geometry}
-        material={materials["Material.019"]}
-        position={[-11.551, 5.872, -6.132]}
-        rotation={[Math.PI / 2, -0.018, 1.571]}
-        scale={7.82}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Text004.geometry}
-        material={materials["Material.020"]}
-        position={[-11.454, 2.837, 1.941]}
-        rotation={[1.571, -0.018, 1.559]}
-        scale={1.825}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Text005.geometry}
-        material={materials["Material.022"]}
-        position={[12.944, 7.328, -4.818]}
-        rotation={[2.209, -0.014, 1.581]}
-        scale={7.82}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Text006.geometry}
-        material={materials["Material.024"]}
-        position={[13.051, 10.008, -1.534]}
-        rotation={[0.932, 0.001, -1.543]}
-        scale={3.438}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Sign_Design.geometry}
-        material={materials["Sign Design"]}
-        position={[-0.163, 4.532, -6.916]}
-        rotation={[Math.PI / 2, 0, -3.134]}
-        scale={7.181}
-      />
-      <mesh
-        
-        
-        geometry={nodes["food-pics-window"].geometry}
-        material={materials["food-pics-window"]}
-        position={[-9.161, 3.975, 3.655]}
-        rotation={[Math.PI / 2, 0, -3.125]}
-        scale={5.037}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Mball011.geometry}
-        material={materials["no parking_Procedural Metal 01"]}
-        position={[-0.023, 0.025, 0.006]}
-        scale={0.006}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Bolt.geometry}
-        material={materials["no parking_Procedural Metal 01"]}
-      />
-      <group position={[-14.697, 0.878, -9.13]} scale={4.648}>
-        <mesh
-          
-          
-          geometry={nodes.texturedMesh.geometry}
-          material={materials.material_1001}
-        />
-        <mesh
-          
-          
-          geometry={nodes.texturedMesh_1.geometry}
-          material={materials.material_1002}
-        />
-        <mesh
-          
-          
-          geometry={nodes.texturedMesh_2.geometry}
-          material={materials.material_1003}
-        />
-        <mesh
-          
-          
-          geometry={nodes.texturedMesh_3.geometry}
-          material={materials.material_1004}
-        />
-        <mesh
-          
-          
-          geometry={nodes.texturedMesh_4.geometry}
-          material={materials["Material.009"]}
-        />
-      </group>
-      <group
-        position={[-4.287, 0.911, 10.332]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-      >
-        <mesh
-          
-          
-          geometry={nodes.di002.geometry}
-          material={materials["材质.004"]}
-          position={[0.723, -0.602, -0.571]}
-          scale={1.721}
-        />
-      </group>
-      <group
-        position={[-16.024, 1.044, 8.883]}
-        rotation={[-Math.PI, -0.012, -Math.PI]}
-        scale={1.89}
-      >
-        <mesh
-          
-          
-          geometry={nodes.back.geometry}
-          material={materials.green_metal_rust}
-        />
-        <mesh
-          
-          
-          geometry={nodes.bars_back.geometry}
-          material={materials["green_metal_rust.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.bit.geometry}
-          material={materials.white}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube009.geometry}
-          material={materials["green_metal_rust.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Outer_Bars.geometry}
-          material={materials.green_metal_rust}
-        />
-        <mesh
-          
-          
-          geometry={nodes.pole.geometry}
-          material={materials.green_metal_rust}
-        />
-        <mesh
-          
-          
-          geometry={nodes.railing.geometry}
-          material={materials["Material.010"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Sign_Random.geometry}
-          material={materials["Subway Trims.002"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.sphere_detail.geometry}
-          material={materials["green_metal_rust.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Station_Sign_A.geometry}
-          material={materials["Subway Trims.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Station_Sign_B.geometry}
-          material={materials["Subway Trims.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Subway.geometry}
-          material={materials["Material.004"]}
-          position={[0.029, 0.049, 0.032]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Subway_Sign.geometry}
-          material={materials["Subway Trims"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.whateverthing.geometry}
-          material={materials["green_metal_rust.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube014.geometry}
-          material={materials.green_metal_rust}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube014_1.geometry}
-          material={materials.ad}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Sphere_1.geometry}
-          material={materials.bottomwhite}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Sphere_2.geometry}
-          material={materials.topgreen}
-        />
-      </group>
-      <group
-        position={[18.349, 0.911, 7.098]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={5.371}
-      >
-        <mesh
-          
-          
-          geometry={nodes.Cylinder014.geometry}
-          material={materials["metal_dark.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder014_1.geometry}
-          material={materials.light_cold}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cylinder014_2.geometry}
-          material={materials.metal_clear}
-        />
-      </group>
-      <group position={[10.823, 0.862, 10.933]} scale={2.648}>
-        <mesh
-          
-          
-          geometry={nodes.metal_trash_can.geometry}
-          material={materials.metal_trash_can}
-          position={[0.845, 0.267, -0.067]}
-          rotation={[-0.088, 0.228, 1.56]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.metal_trash_can_lid.geometry}
-          material={materials.metal_trash_can}
-          position={[0.589, 0.069, 0.214]}
-          rotation={[-0.254, -0.732, -0.123]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.metal_trash_can_rust.geometry}
-          material={materials.metal_trash_can_rust}
-          position={[-0.5, 0, 0]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.metal_trash_can_rust_handle_left.geometry}
-          material={materials.metal_trash_can_rust}
-          position={[-0.773, 0.65, 0]}
-          rotation={[0, 0, -1.833]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.metal_trash_can_rust_handle_right.geometry}
-          material={materials.metal_trash_can_rust}
-          position={[-0.227, 0.65, 0]}
-          rotation={[0, 0, -0.659]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.metal_trash_can_rust_lid.geometry}
-          material={materials.metal_trash_can_rust}
-          position={[-0.874, 0.286, 0]}
-          rotation={[0, 0, 1.317]}
-        />
-      </group>
-      <group
-        position={[6.294, 5.378, -9.838]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-      >
-        <mesh
-          
-          
-          geometry={nodes.door.geometry}
-          material={materials["Industrial steel door"]}
-          position={[6.372, -4.432, -3.035]}
-          scale={[4.508, 3.179, 3.179]}
-        />
-      </group>
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Tube014.geometry}
-        material={nodes.Manapole_Olanda_bike_Tube014.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Sphere001.geometry}
-        material={nodes.Manapole_Olanda_bike_Sphere001.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Rectangle306.geometry}
-        material={nodes.Manapole_Olanda_bike_Rectangle306.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Object173.geometry}
-        material={nodes.Manapole_Olanda_bike_Object173.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Line366.geometry}
-        material={materials.black_wire}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Helix001.geometry}
-        material={materials["Car Paint"]}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Cylinder074.geometry}
-        material={nodes.Manapole_Olanda_bike_Cylinder074.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Cylinder073.geometry}
-        material={nodes.Manapole_Olanda_bike_Cylinder073.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Cylinder022.geometry}
-        material={materials.metal_silver}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Cylinder019.geometry}
-        material={materials.metal_silver}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_ChamferCyl156.geometry}
-        material={nodes.Manapole_Olanda_bike_ChamferCyl156.material}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <mesh
-        
-        
-        geometry={nodes.Manapole_Olanda_bike_Box002.geometry}
-        material={materials.red}
-        position={[0.002, 0, 0.055]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-        scale={0.001}
-      />
-      <group position={[75.845, 0, -11.798]}>
-        <group
-          position={[-61.629, 0.674, 7.997]}
-          rotation={[-Math.PI, 1.539, -Math.PI]}
-          scale={3.164}
-        >
-          <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_1"].geometry}
-            material={materials["Galaga Cabinet Structure"]}
+            geometry={nodes.Final_Bridge1_SF_Roof_Final_0.geometry}
+            material={materials.SF_Roof_Final}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_2"].geometry}
-            material={materials["Retro Cabinet Screen Shield"]}
+            geometry={nodes.Final_Bridge1_SF_Roof_Final_0_1.geometry}
+            material={materials.SF_Roof_Final}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_3"].geometry}
-            material={materials["Galaga Cabinet Screen and Marquee"]}
+            geometry={nodes.Final_Bridge1_SF_Roof_Final_0_2.geometry}
+            material={materials.SF_Roof_Final}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_4"].geometry}
-            material={materials["Galaga Cabinet Control & Front"]}
+            geometry={nodes.Final_Bridge1_SF_Roof_Final_0_3.geometry}
+            material={materials.SF_Roof_Final}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_5"].geometry}
-            material={materials["Galaga Cabinet Artwork Bottom"]}
+            geometry={nodes.Final_Bridge1_SF_Rocks_Mat_0.geometry}
+            material={materials.SF_Rocks_Mat}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_6"].geometry}
-            material={materials["Galaga Cabinet Coin Panel"]}
+            geometry={nodes.Final_Bridge1_SF_Windows_Mat_0.geometry}
+            material={materials.SF_Windows_Mat}
+          />
+  
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Windows_Mat_0_1.geometry}
+            material={materials.SF_Windows_Mat}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_7"].geometry}
-            material={materials["Galaga Cabinet Wall Right"]}
+            geometry={nodes.Final_Bridge1_SF_Windows_Mat_0_2.geometry}
+            material={materials.SF_Windows_Mat}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_8"].geometry}
-            material={materials["Galaga Cabinet Wall Left"]}
+            geometry={nodes.Final_Bridge1_SF_Bush_Mat_0.geometry}
+            material={materials.SF_Bush_Mat}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_9"].geometry}
-            material={materials["Shiny Red Plastic"]}
+            geometry={nodes.Final_Bridge1_SF_TreeWood_Mat_0.geometry}
+            material={materials.SF_TreeWood_Mat}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_10"].geometry}
-            material={materials["Shiny Yellow Plastic"]}
+            geometry={nodes.Final_Bridge1_SF_TreeWood_Mat_0_1.geometry}
+            material={materials.SF_TreeWood_Mat}
           />
           <mesh
             
             
-            geometry={nodes["Coin-op_Arcade_Game_Cabinet_Galaga_11"].geometry}
-            material={materials["Joystick Metal"]}
-          />
-        </group>
-      </group>
-      <group
-        position={[-12.198, 0.901, -2.548]}
-        rotation={[-Math.PI, 0.02, -Math.PI]}
-        scale={3.277}
-      >
-        <mesh
-          
-          
-          geometry={nodes.Text015.geometry}
-          material={materials["Matte Paint.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Text015_1.geometry}
-          material={materials["Aluminium scratches.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.buttons_plastic.geometry}
-          material={materials["Matte Paint"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.camera.geometry}
-          material={materials["Cheap Plastic.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes["case"].geometry}
-          material={materials["case"]}
-          position={[-0.079, 0, 0.002]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.credit_card.geometry}
-          material={materials.card}
-        />
-        <mesh
-          
-          
-          geometry={nodes.credit_card_holder.geometry}
-          material={materials["Black plastic"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.deposit_1.geometry}
-          material={materials["Black plastic"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.deposit_2.geometry}
-          material={materials["Black plastic"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.display_button.geometry}
-          material={materials["white key"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.money_dispenser_1.geometry}
-          material={materials["Matte Paint.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.money_dispenser_2.geometry}
-          material={materials["Black plastic"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.money_door.geometry}
-          material={materials["Black plastic"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.panel001.geometry}
-          material={materials["Aluminium scratches.002"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Plane.geometry}
-          material={materials["Aluminium scratches.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Plane_1.geometry}
-          material={materials["ROJO.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Plane_2.geometry}
-          material={materials["AMARILLO.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Plane_3.geometry}
-          material={materials.VERDE}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube020.geometry}
-          material={materials["Matte Paint.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube020_1.geometry}
-          material={materials["Cheap Injection Moulded Plastic.001"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube017.geometry}
-          material={materials["Brushed Aluminum 2"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube017_1.geometry}
-          material={materials["Scratched Glass"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube016.geometry}
-          material={materials["Plastic rough finish"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube016_1.geometry}
-          material={materials["Transparent Glossy Plastic"]}
-        />
-        <mesh
-          
-          
-          geometry={nodes.Cube016_2.geometry}
-          material={materials["luz 1"]}
-        />
-      </group>
-      <group
-        position={[2.852, 14.499, -2.221]}
-        rotation={[-Math.PI, 0, -Math.PI]}
-      >
-        <group
-          position={[-7.777, 0.201, 1.484]}
-          rotation={[Math.PI, -1.518, Math.PI]}
-        >
-          <mesh
-            
-            
-            geometry={nodes.Plane019.geometry}
-            material={materials["steel.02"]}
+            geometry={nodes.Final_Bridge1_SF_TreeLeaf_Mat_0.geometry}
+            material={materials.SF_TreeLeaf_Mat}
           />
           <mesh
             
             
-            geometry={nodes.Plane019_1.geometry}
-            material={materials["frame.02"]}
+            geometry={nodes.Final_Bridge1_SF_HouseSupport_Mat_0.geometry}
+            material={materials.SF_HouseSupport_Mat}
           />
           <mesh
             
             
-            geometry={nodes.Plane019_2.geometry}
-            material={materials["solar.02"]}
+            geometry={nodes.Final_Bridge1_SF_HouseJoins_Mat_0.geometry}
+            material={materials.SF_HouseJoins_Mat}
           />
           <mesh
             
             
-            geometry={nodes.Plane019_3.geometry}
-            material={materials["plastic.02"]}
+            geometry={nodes.Final_Bridge1_SF_Chimney_Mat_0.geometry}
+            material={materials.SF_Chimney_Mat}
           />
           <mesh
             
             
-            geometry={nodes.Plane019_4.geometry}
-            material={materials["concrete.001"]}
+            geometry={nodes.Final_Bridge1_SF_CutRock_Mat_0.geometry}
+            material={materials.SF_CutRock_Mat}
           />
-        </group>
-      </group>
-      <mesh
-        
-        
-        geometry={nodes.Cube.geometry}
-        material={materials.Material}
-      />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Stalagmites_Mat_0.geometry}
+            material={materials.SF_Stalagmites_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_WoodTex_Mat_0.geometry}
+            material={materials.SF_WoodTex_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_PlasterTex_Mat_0.geometry}
+            material={materials.SF_PlasterTex_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_StoneBrick_Mat_0.geometry}
+            material={materials.SF_StoneBrick_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Island_Mat_0.geometry}
+            material={materials.SF_Island_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_LampGlass_Mat_0.geometry}
+            material={materials.SF_LampGlass_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Lamp_Mat_0.geometry}
+            material={materials.SF_Lamp_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Candle_Mat_0.geometry}
+            material={materials.SF_Candle_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Grass_Mat_0.geometry}
+            material={materials.SF_Grass_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Rail_Mat_0.geometry}
+            material={materials.SF_Rail_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_GrassCards_Mat_0.geometry}
+            material={materials.SF_GrassCards_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_GrassCards_Mat_0_1.geometry}
+            material={materials.SF_GrassCards_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_GrassCards_Mat_0_2.geometry}
+            material={materials.SF_GrassCards_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_GrassCards_Mat_0_3.geometry}
+            material={materials.SF_GrassCards_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Sack_Mat_0.geometry}
+            material={materials.SF_Sack_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_MineCart_Mat_0.geometry}
+            material={materials.SF_MineCart_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Bridge_Mat_0.geometry}
+            material={materials.SF_Bridge_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Door_Mat_0.geometry}
+            material={materials.SF_Door_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Water_Mat_0.geometry}
+            material={materials.SF_Water_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_Final_Water001_0.geometry}
+            material={materials["Final_Water.001"]}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_Final_Rocks2_Mat_0.geometry}
+            material={materials.Final_Rocks2_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_Black_0.geometry}
+            material={materials.Black}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_ButterFly_Mat_0.geometry}
+            material={materials.SF_ButterFly_Mat}
+          />
+          <mesh
+            
+            
+            geometry={nodes.Final_Bridge1_SF_Lillypad_Mat_0.geometry}
+            material={materials.SF_Lillypad_Mat}
+          />
+
     </a.group>
   );
 }
