@@ -1,5 +1,5 @@
-import React from 'react'
-import { useState,Suspense } from 'react'
+import React, {useState,useEffect} from 'react'
+import {Suspense } from 'react'
 import {Canvas} from '@react-three/fiber'
 import Loader  from '../components/Loader'
 import Building from '../models/Building'
@@ -16,6 +16,11 @@ import HomeInfo from '../components/HomeInfo'
 const Home = () => {
   const[isRotating, setIsRotating] = React.useState(false);
   const[currentStage, setCurrentStage] = useState(1); 
+
+
+
+
+
   const adjustBuildingForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -47,7 +52,18 @@ const Home = () => {
   const [buildingScale , buildingPosition,buildingRotation] = adjustBuildingForScreenSize();
   const [planeScale , planePosition] = adjustPlaneForScreenSize();
 
+const handleOrientationChange = () => {
+    // Update currentStage based on orientation change logic
+    setCurrentStage(/* Update currentStage based on orientation */);
+  };
 
+  // Effect to add orientation change event listener
+  useEffect(() => {
+    window.addEventListener('orientationchange', handleOrientationChange);
+    return () => {
+      window.removeEventListener('orientationchange', handleOrientationChange);
+    };
+  }, []);
 
   return (
     <section className= "w-full h-screen relative">
@@ -88,7 +104,7 @@ rotation = {[0,20,0]}
 </Suspense>
      </Canvas>
     </section>
-  )
-}
+  );
+};
 
 export default Home

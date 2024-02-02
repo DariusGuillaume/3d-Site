@@ -181,3 +181,24 @@ body:has(.card[data-color="green"]:hover) {
   box-shadow: 0.6vmin 0.6vmin #fff, 1vmin 1vmin #d2e4ff, 1vmin 1vmin #d2e4ff,
     0.65vmin 1vmin #d2e4ff, 1vmin 0.65vmin #d2e4ff;
 }
+
+.neo-brutalism-yellow {
+  background: yellow; 
+  position: relative;
+  border-radius: 10px;
+  border: #2b77e7;
+  box-shadow: 0.6vmin 0.6vmin #336cc1, 1vmin 1vmin #0092db, 1vmin 1vmin #0092db,
+    0.65vmin 1vmin #0092db, 1vmin 0.65vmin #0092db;
+}
+.neo-brutalism-green {
+  background-color: #01796F; 
+  position: relative;
+  border-radius: 10px;
+  border: #01796F;
+  box-shadow: 0.6vmin 0.6vmin #01796F, 1vmin 1vmin #014C46, 1vmin 1vmin #014C46,
+    0.65vmin 1vmin #014C46, 1vmin 0.65vmin #014C46;
+}
+.pine-green-text {
+  color: #01796F !important;
+}
+
