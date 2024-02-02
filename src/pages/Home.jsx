@@ -5,8 +5,8 @@ import Loader  from '../components/Loader'
 import Building from '../models/Building'
 import Sky from '../models/Sky'
 import Bird from '../models/Bird'
-import Plane from '../models/Plane'
 import HomeInfo from '../components/HomeInfo'
+import Plane from '../models/Plane'
 
 
 
@@ -16,7 +16,7 @@ import HomeInfo from '../components/HomeInfo'
 const Home = () => {
   const[isRotating, setIsRotating] = React.useState(false);
   const[currentStage, setCurrentStage] = useState(1); 
-
+    const [isLoading, setIsLoading] = useState(true); 
 
 
 
@@ -67,11 +67,17 @@ const handleOrientationChange = () => {
 
   return (
     <section className= "w-full h-screen relative">
-    {<div className= "absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+    <div className= "absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
         {currentStage && <HomeInfo currentStage = {currentStage}/>}
+</div> 
 
-</div> }
-    
+
+{isLoading ? null : (
+  <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white bg-blue-500 p-2 rounded z-10">
+    Click and Drag
+  </div>
+)}
+ 
     <Canvas 
     className= {`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
 

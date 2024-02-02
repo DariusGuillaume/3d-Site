@@ -1,16 +1,15 @@
-import React from 'react'
-import { Html } from '@react-three/drei'
+import React from 'react';
+import { Html } from '@react-three/drei';
+import { FaHourglassHalf } from 'react-icons/fa';
 
 const Loader = () => {
   return (
     <Html>
-    <div className = "flex justify-center items-center">
-        <div className = "w-20 h-20 border-2 border-opacity-20 border-purple-700 border-t-purple-700 rounded-full animate-spin">
+      <div className="flex justify-center items-center">
+        <FaHourglassHalf className="w-10 h-10 animate-spin text-blue-500" />
+      </div>
+    </Html>
+  );
+};
 
-        </div>
-    </div>
-        </Html>
-  )
-}
-
-export default Loader
+export default Loader;
