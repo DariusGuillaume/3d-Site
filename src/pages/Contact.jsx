@@ -7,7 +7,10 @@ const Contact = () => {
 
     const handleChange = (e) => {
       setForm({...form, [e.target.name]: e.target.value})
-    }
+    };
+
+const handleFocus = () => {};
+const handleBlur = () => {};
 
   return (
 
@@ -22,12 +25,50 @@ const Contact = () => {
       <input type="text"
       name = "name"
       className="input"
-      placeholder = "John"
+      placeholder = "Name"
       required
       value = {form.name}
       onChange = {handleChange}
+      onFocus = {handleFocus}
+      onBlur = {handleBlur}
       />
     </label>
+
+    <label className="text-black-500 font-semibold">
+      Email
+      <input type="email"
+      name = "email"
+      className="input"
+      placeholder = "name@gmail.com"
+      required
+      value = {form.email}
+      onChange = {handleChange}
+      onFocus = {handleFocus}
+      onBlur = {handleBlur}
+      />
+    </label>
+    <label className="text-black-500 font-semibold">
+      Name
+      <textarea type="text"
+
+      name = "message"
+      rows = {4}
+      className="textarea"
+      placeholder = "Curious about how I can help you? Let's chat!"
+      required
+      value = {form.message}
+      onChange = {handleChange}
+      onFocus = {handleFocus}
+      onBlur = {handleBlur}
+      />
+    </label>
+    <button 
+    type="submit"
+    className="btn"
+    onFocus={handleFocus}
+    onBlur={handleBlur}
+    >
+      </button>
     
     </form>
 </div>
