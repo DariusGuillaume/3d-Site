@@ -202,3 +202,15 @@ body:has(.card[data-color="green"]:hover) {
   color: #01796F !important;
 }
 
+.coming-soon {
+  font-size: 36px; 
+  text-align: center;
+}
+
+.coming-soon span.yellow-text {
+  color: yellow;
+}
+
+.coming-soon span {
+  color: black;
+}
