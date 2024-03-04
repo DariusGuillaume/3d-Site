@@ -1,4 +1,4 @@
-Darius Guillaume - 3D Portfolio Website
+3D Portfolio Website
 Welcome to my 3D portfolio website! This site showcases my work as a software developer, with a focus on 3D modeling and web development. Using HTML, CSS, Three.js, Blender, and JavaScript, I've created a space where you can explore my projects and learn more about my skills and interests.
 
 Features
@@ -19,14 +19,6 @@ You can explore my 3D portfolio website at dariusguillaume.xyz. Feel free to bro
 
 Contributing
 While this website primarily serves as a showcase of my work, contributions and suggestions for improvements are always welcome. If you have ideas for new features or enhancements, please don't hesitate to reach out or submit a pull request.
-
-About Me
-I'm Darius Guillaume, a software developer passionate about creating immersive web experiences and exploring the intersection of technology and creativity. This website reflects my dedication to pushing the boundaries of what's possible with web development and 3D graphics.
-
-Thank you for visiting my 3D portfolio website! I hope you enjoy exploring my projects and learning more about my journey as a software developer.
-
-
-
 
 
 
